@@ -1,0 +1,93 @@
+export type ProjectType = {
+  id: number,
+  title: string,
+  descriptions: string,
+  tags: string[],
+  imgUrls: string[],
+  color: string,
+  link?: string,
+  linkGit?: string,
+}
+
+export const dataProjects: ProjectType[] = [
+  {
+    id: 1,
+    title: 'Matahari Hills',
+    descriptions: 'Description',
+    tags: ['Landing Page', 'Wordpress'],
+    imgUrls: ['/img/matahari/prev.jpg'],
+    color: "#252B42",
+    link: 'https://sumbawa-property.com',
+  },
+  {
+    id: 2,
+    title: 'Cannabionics',
+    descriptions: 'Description',
+    tags: ['App', 'React JS'],
+    imgUrls: ['/img/cannabionics/prev.jpg'],
+    color: "#AF7EFB",
+    link: 'https://ivzakharov.github.io/cannabionics',
+  },
+  {
+    id: 3,
+    title: 'Habit Tracker',
+    descriptions: 'Description',
+    tags: ['Design', 'App', 'React JS'],
+    imgUrls: ['/img/habit/prev.jpg'],
+    color: "#C092BD",
+    linkGit: ''
+  },
+  {
+    id: 4,
+    title: 'Gadjets',
+    descriptions: 'Description',
+    tags: ['Ecommerce', 'JavaScript'],
+    imgUrls: ['/img/gadjet/prev.jpg'],
+    color: "#E9CE8B",
+    linkGit: ''
+  },
+  {
+    id: 5,
+    title: 'Pizza Shark',
+    descriptions: 'Description',
+    tags: ['Design', 'React JS'],
+    imgUrls: ['/img/pizza/prev.jpg'],
+    color: "#EE674A",
+  },
+  {
+    id: 6,
+    title: 'LTVCAC Agency',
+    descriptions: 'Description',
+    tags: ['React JS'],
+    imgUrls: ['/img/ltvcac/prev.jpg'],
+    link: 'https://ltvcac.agency',
+    color: "#5E8FEF",
+  },
+  {
+    id: 7,
+    title: 'Roll Shark',
+    descriptions: 'Description',
+    tags: ['Design', 'Wordpress'],
+    imgUrls: ['/img/shark/prev.jpg'],
+    link: 'https://ltvcac.agency',
+    color: "#CA5252",
+  },
+  {
+    id: 8,
+    title: 'Moments Hall',
+    descriptions: 'Description',
+    tags: ['Design', 'Landing Page', 'Wordpress'],
+    imgUrls: ['/img/moments/prev.jpg'],
+    link: 'https://moments-hall.ru/',
+    color: "#FC8686",
+  },
+
+  {
+    id: 9,
+    title: 'Fish',
+    descriptions: 'Description',
+    tags: ['Design'],
+    imgUrls: ['/img/sushi/prev.jpg'],
+    color: "#545454",
+  },
+]

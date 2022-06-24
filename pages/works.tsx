@@ -1,16 +1,14 @@
 import type { NextPage } from 'next';
 import { Layout } from '../layouts/Layout';
-import { Hero } from '../components/Hero/Hero';
-
-import { Grid } from '@mui/material';
 import { ProjectCard } from '../components/ProjectCard/ProjectCard';
+import { Grid } from '@mui/material';
+
 import { dataProjects } from '../data';
 
-const Home: NextPage = () => {
+const Works: NextPage = () => {
   return (
     <>
-      <Layout>
-        <Hero />
+      <Layout title="Works" description="">
         <Grid>
           {dataProjects.map((obj) => (
             <ProjectCard
@@ -26,4 +24,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Works;
