@@ -1,5 +1,4 @@
 import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { Container } from '@mui/material';
@@ -26,7 +25,6 @@ export const Layout = ({
       <div className="ph-md-60 ph-xl-100">
         <Container maxWidth="xl">{children}</Container>
       </div>
-      <Footer />
     </>
   );
 };

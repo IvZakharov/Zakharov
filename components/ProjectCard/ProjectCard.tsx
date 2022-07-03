@@ -6,24 +6,34 @@ type ProjectCardProps = {
   title: string;
   imageUrl: string;
   color: string;
+  tags: string[];
+  descriptions: string;
 };
 
-export const ProjectCard = ({ title, imageUrl, color }: ProjectCardProps) => {
+export const ProjectCard = ({ title, imageUrl, color, tags, descriptions }: ProjectCardProps) => {
   return (
-    <article className={styles.projectCard}>
+    <article className={`${styles.projectCard} projectCard`}>
       <style jsx>{`
-        .imgWrap {
+        .projectCard {
           background-color: ${color};
-          border-radius: 30px;
-          padding: 30px;
           display: flex;
           justify-content: center;
+          align-content: center;
         }
       `}</style>
-      <div className="imgWrap">
+
+      <div className={styles.info}>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{descriptions}</p>
+        <ul className={styles.tags}>
+          {tags.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.imgWrap}>
         <Image className={styles.img} src={imageUrl} width={500} height={300}></Image>
       </div>
-      <h3 className={styles.title}>{title}</h3>
     </article>
   );
 };

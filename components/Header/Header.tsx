@@ -12,23 +12,21 @@ export const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.wrapper}>
-          <Link href="/" className={styles.home}>
-            <a>
-              <Image width={80} height={50} src={logo} />
-            </a>
-          </Link>
+
+
+
           <nav className={styles.mainNav}>
             <ul>
               <li>
-                <Link href="/works">
-                  <a className={router.pathname == '/works' ? styles.active : ''}>Works</a>
-                </Link>
-              </li>
+                {router.pathname !== '/' ?  <Link href="/" >
+                  <a className={router.pathname !== '/' ? 'colorWhite' : ""}>Home</a>
+                </Link> : null}
 
+              </li>
               <li>
-                <Link href="/contacts">
-                  <a className={router.pathname == '/contacts' ? styles.active : ''}>Contacts</a>
-                </Link>
+                {router.pathname !== '/works' ?  <Link href="/works"  >
+                  <a>Works</a>
+                </Link> : null}
               </li>
             </ul>
           </nav>
